@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | Project tracking intro component | Alfred Thompson Ovie</title>
+    <style>
+      .is--ready {
+        visibility: hidden;
+      }
+    </style>
+
+    <script>
+      document.getElementsByTagName("html")[0].classList.add("is--ready");
+    </script>
+  </head>
+  <body>
+    <div id="app">
+      <nav class="nav">
+        <section class="nav__contents">
+          <a href="#" class="branding">
+            <img src="images/logo.svg" alt="site logo">
+          </a>
+          <div class="hamburger">
+            <div class="bar top"></div>
+            <div class="bar middle"></div>
+            <div class="bar bottom"></div>
+          </div>
+          <ul class="nav__list is__active">
+            <li class="nav__item"><a href="#" class="nav__link">product</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">features</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">pricing</a></li>
+            <li class="dot"></li>
+            <li class="nav__item"><a href="#" class="nav__link">login</a></li>
+          </ul>
+        </section>
+      </nav>
+
+      <!-- display main as grid -->
+      <main class="hero">
+        <section class="hero__illustration">
+          <img src="images/illustration-devices.svg" alt="illustration devices">
+        </section>
+        <section class="hero__contents">
+          
+        </section>
+      </main>
+    </div>
+    <script>
+      window.addEventListener("DOMContentLoaded", ()=>{
+        document.getElementsByTagName("html")[0].classList.remove("is--ready");
+      })
+    </script>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Barlow:wght@700&display=swap');
+:root {
+  box-sizing: border-box;
+
+  --Red: hsl(0, 100%, 68%);
+  --VeryDarkBlue: hsl(230, 29%, 20%);
+  --DarkGrayishBlue: hsl(230, 11%, 40%);
+  --GrayishBlue: hsl(231, 7%, 65%);
+  --LightGrayishBlue: hsl(207, 33%, 95%);
+  --fs: 18px;
+  -fw-regular: 400;
+  -fw-bold: 700;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Barlow', sans-serif;
+}
+*,*::before, *::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+button {
+ 
+}
+img {
+  max-width: 100%;
+}
+ul {
+  list-style: none;
+}
+
+body {
+  background-color: var(--LightGrayishBlue);
+}
+
+/* h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+} */
+
+#app {
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+  min-height: 100vh;
+}
+#app::before {
+  content: "";
+  background-color: var(--GrayishBlue);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 55%;
+  width: 50%;
+  border-bottom-left-radius: 3em;
+  z-index: -1;
+  opacity: .3;
+}
+
+nav, .hero {
+  display: grid;
+  grid-template-columns: 1fr 10fr 1fr;
+  grid-template-rows: auto;
+}
+.nav__contents {
+  grid-column: 2;
+  grid-row: auto;
+  display: flex;
+  align-items: center;
+  padding: 1em 0;
+  position: relative;
+}
+.hamburger {
+  position: relative;
+  width: 1.4em;
+  height: 1.5em;
+  margin-left: auto;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.bar {
+  height: 4px;
+  width: 100%;
+  background-color: #000;
+  /* position: absolute; */
+  display: inline-block;
+  /* flex: 1; */
+  transition: all .3s linear;
+}
+.hamburger.active .bar.top {
+  transform: translateY(1px) rotate(50deg);
+  transform-origin: left;
+}
+.hamburger.active .bar.bottom {
+  transform: translateY(-2px) rotate(-50deg);
+  transform-origin: left;
+}
+.hamburger.active .bar.middle {
+  display: none;
+}
+.nav__list {
+  position: absolute;
+  top: 5em;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 1em;
+}
+.nav__item + .nav__item {
+  margin-top: .5em;
+}
+.nav__item {
+  text-align: center;
+}
+.nav__item:nth-child(5) {
+  border-top: 1px solid var(--GrayishBlue);
+  /* padding-top: 1em; */
+}
+.nav__item:nth-child(5) .nav__link{
+  padding-top: 1.5em;
+  color: var(--GrayishBlue);
+}
+
+.nav__link {
+  text-transform: uppercase;
+  /* letter-spacing: 1px; */
+  /* background-color: red; */
+  display: block;
+  padding: .5em;
+  color: var(--VeryDarkBlue);
+}
+
+.is__active {
+  display: none;
+}
+.hero__illustration{
+  grid-column: 1/-1;
+}
+.hero__contents {
+  /* grid-row: ; */
+  grid-column: 2;
+}
+
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+  .is__active {
+    display: block;
+  }
+  .nav__list {
+    position: static;
+    background-color: transparent;
+    width: initial;
+    border-radius: 0px;
+    padding: 0em;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-left: auto;
+  }
+  .nav__item + .nav__item {
+    margin-top: 0em;
+  }
+  .nav__item {
+    text-align: center;
+  }
+  .dot{
+    /* margin: 0 2em; */
+    width: 5px;
+    height: 5px;
+    background-color: var(--GrayishBlue);
+    border-radius: 50%;
+  }
+  .nav__item:nth-child(5) {
+    border-top: none;
+  }
+  .nav__item:nth-child(5) .nav__link{
+    padding-top: 0.5em;
+    color: var(--GrayishBlue);
+  }
+  .nav__link:hover {
+    text-decoration: underline;
+  }
+}
+@media (min-width: 900px) {
+  .nav__list {
+    gap: 1.5em;
+  }
+}
+@media (min-width: 768px) {
+
+}
+/* 
+
+
+README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/alfredthompsonOvie/project-tracking-intro-component.git
+git push -u origin main
+
+*/
