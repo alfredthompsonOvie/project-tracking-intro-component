@@ -1,57 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Frontend Mentor | Project tracking intro component | Alfred Thompson Ovie</title>
-    <style>
-      .is--ready {
-        visibility: hidden;
-      }
-    </style>
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<!-- <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>
+			Frontend Mentor | Project tracking intro component | Alfred Thompson Ovie
+		</title>
+		<style>
+			.is--ready {
+				visibility: hidden;
+			}
+		</style>
+		<script>
+			document.getElementsByTagName("html")[0].classList.add("is--ready");
+		</script>
+	</head>
+	<body data-barba="wrapper">
+		<div class="loader">
+			<!-- <div class="page-transition"></div> -->
+			<ul class="page-transiton-list">
+				<li class="page-transtion-listItem"></li>
+				<li class="page-transtion-listItem"></li>
+				<li class="page-transtion-listItem"></li>
+				<li class="page-transtion-listItem"></li>
+				<li class="page-transtion-listItem"></li>
+				
+			</ul>
+		</div>
+		
+		<div id="app" data-barba="container">
+			<nav class="nav">
+				<section class="nav__contents">
+					<a href="#" class="branding">
+						<img src="images/logo.svg" alt="site logo" />
+					</a>
+					<div class="hamburger">
+						<div class="bar top"></div>
+						<div class="bar middle"></div>
+						<div class="bar bottom"></div>
+						<!-- <span class="circle circle-top"></span>
+            <span class="circle circle-left"></span>
+            <span class="circle circle-right"></span>
+            <span class="circle circle-bottom"></span> -->
+					</div>
+					<ul class="nav__list is__active">
+						<li class="nav__item"><a href="#" class="nav__link">product</a></li>
+						<li class="nav__item">
+							<a href="#" class="nav__link">features</a>
+						</li>
+						<li class="nav__item"><a href="#" class="nav__link">pricing</a></li>
+						<li class="nav__item dot"></li>
+						<li class="nav__item"><a href="#" class="nav__link">login</a></li>
+					</ul>
+				</section>
+			</nav>
 
-    <script>
-      document.getElementsByTagName("html")[0].classList.add("is--ready");
-    </script>
-  </head>
-  <body>
-    <div id="app">
-      <nav class="nav">
-        <section class="nav__contents">
-          <a href="#" class="branding">
-            <img src="images/logo.svg" alt="site logo">
-          </a>
-          <div class="hamburger">
-            <div class="bar top"></div>
-            <div class="bar middle"></div>
-            <div class="bar bottom"></div>
-          </div>
-          <ul class="nav__list is__active">
-            <li class="nav__item"><a href="#" class="nav__link">product</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">features</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">pricing</a></li>
-            <li class="dot"></li>
-            <li class="nav__item"><a href="#" class="nav__link">login</a></li>
-          </ul>
-        </section>
-      </nav>
-
-      <!-- display main as grid -->
-      <main class="hero">
-        <section class="hero__illustration">
-          <img src="images/illustration-devices.svg" alt="illustration devices">
-        </section>
-        <section class="hero__contents">
-          
-        </section>
-      </main>
-    </div>
-    <script>
-      window.addEventListener("DOMContentLoaded", ()=>{
-        document.getElementsByTagName("html")[0].classList.remove("is--ready");
-      })
-    </script>
-    <script type="module" src="/main.js"></script>
-  </body>
+			<!-- display main as grid -->
+			<main class="hero">
+				<section class="hero__illustration">
+					<img
+						src="images/illustration-devices.svg"
+						alt="illustration devices"
+					/>
+				</section>
+				<section class="hero__contents">
+					<p class="heading">
+						<span class="new">New</span>
+						<span class="heading--text">Monograph</span> 
+						<span class="heading--text">Dashboard</span> 
+					</p>
+					<h1 class="title">
+						<span class="title--span">Powerful</span>
+						<span class="title--span">insights</span>
+						<span class="title--span">into</span>
+						<span class="title--span">your</span>
+						<span class="title--span">team</span>
+						</h1>
+					<p class="description">
+						Project planning and time tracking for agile teams
+					</p>
+					<p class="preview">
+						<a href="#" class="cta">Schedule a demo</a> to see a live preview
+					</p>
+				</section>
+			</main>
+		</div>
+		<section class="attribution__container">
+			<!-- <button type="button" class="attribution--btn-open">
+				<img src="images/icon-hamburger.svg" alt="close attribution">
+			</button> -->
+			<p class="attribution">
+				Challenge by
+				<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+					>Frontend Mentor</a
+				>.  Coded by <a href="https://www.linkedin.com/in/alfredthompsonovie/" target="_blank">Alfred Thompson Ovie</a>.
+			</p>
+			<!-- <button type="button" class="attribution--btnClose">
+				<img src="images/icon-close.svg" alt="close attribution">
+			</button> -->
+		</section>
+		<script>
+			window.addEventListener("DOMContentLoaded", () => {
+				document.getElementsByTagName("html")[0].classList.remove("is--ready");
+			});
+		</script>
+		<script type="module" src="/main.js"></script>
+	</body>
 </html>
